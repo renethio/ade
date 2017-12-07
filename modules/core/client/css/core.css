@@ -1,6 +1,21 @@
-.content {
-  margin-top: 50px;
+body {
+  
+  text-align: center;
 }
+
+.logo {
+  display: inline-block;
+  margin-bottom: -50px;
+}
+
+.carousel-inner img {
+  width: 80%; 
+  margin: auto;
+  max-height: 300px;
+}
+
+
+
 .undecorated-link:hover {
   text-decoration: none;
 }
@@ -16,11 +31,11 @@
   height: 28px;
   width: 28px;
   border-radius: 50%;
-  margin-right: 5px;
+  margin-right: 1px;
 }
 .open .header-profile-image,
 a:hover .header-profile-image {
-  opacity: 1;
+  opacity: 0.5;
 }
 .user-header-dropdown-toggle {
   padding-top: 11px !important;
@@ -37,6 +52,19 @@ a:hover .header-profile-image {
 }
 
 body {
-  background-color: #eeeeee;
+  /*background-color: rgba(10, 60, 11, 0.53);*/
+  background-image: url("/modules/core/client/img/loaders/house2.jpg");
+  background-size: 100% 35%;
+  /*background-size: cover;*/
+  background-repeat: no-repeat;
+  /*height: 50%;*/
+
 }
+
+
+
+
+
+
+
 

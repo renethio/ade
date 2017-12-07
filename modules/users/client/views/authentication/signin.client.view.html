@@ -1,7 +1,14 @@
 <div ng-controller="AuthenticationController">
-  <h3 class="col-md-12 text-center">Login</h3>
-  <div class="col-xs-offset-2 col-xs-10 col-md-offset-4 col-md-4">
-    <form name="userForm" ng-submit="signin(userForm.$valid)" class="signin" novalidate autocomplete="off">
+
+<div>
+  <h1 style="height: 50px;"></h1>
+</div>
+<div class="card col-lg-12 col-xs-12 mx-auto">
+
+  <h2 class="card-header bg-secondary">Login</h2>
+
+  <div class="col-xs-offset-0 col-xs-2 col-md-offset-0 col-lg-offset-0 col-md-4">
+    <form name="userForm" ng-submit="signin(userForm.$valid)" class="signin" novalidate autocomplete="off" style="width: 35rem;">
       <fieldset>
               <alert type="danger" ng-show="error" class="text-center text-danger">
           <span ng-bind="error"></span>
@@ -10,7 +17,7 @@
         <form class="form-group">
         <div class="input-group" show-errors>
         <!--   <label for="username">Username</label> -->
-        <span class="input-group-addon" id="basic-addon1">
+        <span class="input-group-addon" id="basic-addon">
         <i class="glyphicon glyphicon-user"> </i>          
 
         </span>
@@ -26,25 +33,29 @@
           <!-- <label for="password">Password</label> -->
           <span class="input-group-addon" id="basic-addon1">
             
-          
           <i class="glyphicon glyphicon-asterisk"></i>
           </span>
-          <input type="password" id="password" name="password" class="form-control" ng-model="credentials.password" placeholder="Password" required>
+          <input type="password" id="password" name="password" class="form-control btn-lg" ng-model="credentials.password" placeholder="Password" required>
           <div ng-messages="userForm.password.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Password is required.</p>
           </div>
         </div>
         </form>
-        <div class="text-center form-group">
-          <button type="submit" class="btn btn-success btn-lg btn-block">Sign in</button>
-          <!-- &nbsp; or&nbsp; -->
-          <!-- <a ui-sref="authentication.signup">Sign up</a> -->
-        </div>
-        <div class="text-center forgot-password">
+          <div class="text-center forgot-password">
           <a ui-sref="password.forgot">Forgot your password?</a>
         </div>
 
+        <br>
+        <div class="text-center form-group">
+          <button type="submit" class="btn btn-success btn-lg btn-block">Sign in</button>
+        <!--   &nbsp; or&nbsp; -->
+        <br>
+          <a ui-sref="authentication.signup">Create Account</a>
+        </div>
+
+
       </fieldset>
     </form>
+  </div>
   </div>
 </div>

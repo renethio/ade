@@ -8,7 +8,7 @@ var mongoose = require('mongoose'),
 
 
 var statesArray = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"];
-var roomType = ['condo', 'house', 'apartment', 'basement']
+var roomType = ['condo', 'house', 'apartment', 'basement'];
 
 /**
  * Akeray Schema
@@ -24,14 +24,14 @@ var AkeraySchema = new Schema({
     trim: true
   },
 
-        street: String,
-        city: String,
-        state: {
-            type: String,
-            uppercase: true,
-            required: true,
-            enum: statesArray
-        },
+  street: String,
+  city: String,
+  state: {
+    type: String,
+    uppercase: true,
+    required: true,
+    enum: statesArray
+  },
   zip: Number,
 
   created: {

@@ -5,115 +5,113 @@
  */
 var path = require('path'),
   mongoose = require('mongoose'),
-  Akeray = mongoose.model('Akeray'),
+  Liyu = mongoose.model('Liyu'),
   errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller')),
   _ = require('lodash');
 
 /**
- * Create a Akeray
+ * Create a Liyu
  */
 exports.create = function(req, res) {
-  var akeray = new Akeray(req.body);
-  akeray.user = req.user;
+  var liyu = new Liyu(req.body);
+  liyu.user = req.user;
 
-  akeray.save(function(err) {
+  liyu.save(function(err) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
       });
     } else {
-      res.jsonp(akeray);
+      res.jsonp(liyu);
     }
   });
 };
 
 /**
- * Show the current Akeray
+ * Show the current Liyu
  */
 exports.read = function(req, res) {
   // convert mongoose document to JSON
-  var akeray = req.akeray ? req.akeray.toJSON() : {};
+  var liyu = req.liyu ? req.liyu.toJSON() : {};
 
   // Add a custom field to the Article, for determining if the current User is the "owner".
   // NOTE: This field is NOT persisted to the database, since it doesn't exist in the Article model.
-  akeray.isCurrentUserOwner = req.user && akeray.user && akeray.user._id.toString() === req.user._id.toString();
+  liyu.isCurrentUserOwner = req.user && liyu.user && liyu.user._id.toString() === req.user._id.toString();
 
-  res.jsonp(akeray);
+  res.jsonp(liyu);
 };
 
 /**
- * Update a Akeray
+ * Update a Liyu
  */
 exports.update = function(req, res) {
-  var akeray = req.akeray;
+  var liyu = req.liyu;
 
-  akeray = _.extend(akeray, req.body);
+  liyu = _.extend(liyu, req.body);
 
-  akeray.save(function(err) {
+  liyu.save(function(err) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
       });
     } else {
-      res.jsonp(akeray);
+      res.jsonp(liyu);
     }
   });
 };
 
 /**
- * Delete an Akeray
+ * Delete an Liyu
  */
 exports.delete = function(req, res) {
-  var akeray = req.akeray;
+  var liyu = req.liyu;
 
-  akeray.remove(function(err) {
+  liyu.remove(function(err) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
       });
     } else {
-      res.jsonp(akeray);
+      res.jsonp(liyu);
     }
   });
 };
 
 /**
- * List of Akerays
+ * List of Liyus
  */
 exports.list = function(req, res) {
-  Akeray.find().sort('-created').populate('user', 'displayName').exec(function(err, akerays) {
+  Liyu.find().sort('-created').populate('user', 'displayName').exec(function(err, liyus) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
       });
     } else {
-      res.jsonp(akerays);
+      res.jsonp(liyus);
     }
   });
 };
 
-
-
 /**
- * Akeray middleware
+ * Liyu middleware
  */
-exports.akerayByID = function(req, res, next, id) {
+exports.liyuByID = function(req, res, next, id) {
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return res.status(400).send({
-      message: 'Akeray is invalid'
+      message: 'Liyu is invalid'
     });
   }
 
-  Akeray.findById(id).populate('user', 'displayName').exec(function (err, akeray) {
+  Liyu.findById(id).populate('user', 'displayName').exec(function (err, liyu) {
     if (err) {
       return next(err);
-    } else if (!akeray) {
+    } else if (!liyu) {
       return res.status(404).send({
-        message: 'No Akeray with that identifier has been found'
+        message: 'No Liyu with that identifier has been found'
       });
     }
-    req.akeray = akeray;
+    req.liyu = liyu;
     next();
   });
 };
