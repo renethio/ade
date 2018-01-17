@@ -1,11 +1,24 @@
+
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgb(60,60,60);
+   color: white;
+   text-align: center;
+}
+
 body {
   
   text-align: center;
 }
 
 .logo {
-  display: inline-block;
+  /*display: inline-block;*/
   margin-bottom: -50px;
+
 }
 
 .carousel-inner img {
@@ -14,7 +27,12 @@ body {
   max-height: 300px;
 }
 
+.footer img {
 
+  width: 20px;
+  height: 20px;
+
+}
 
 .undecorated-link:hover {
   text-decoration: none;
@@ -53,10 +71,10 @@ a:hover .header-profile-image {
 
 body {
   /*background-color: rgba(10, 60, 11, 0.53);*/
-  background-image: url("/modules/core/client/img/loaders/house2.jpg");
-  background-size: 100% 35%;
+  background-image: url("/modules/core/client/img/loaders/under.jpg");
+  background-size: 100% 100%;
   /*background-size: cover;*/
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;*/
   /*height: 50%;*/
 
 }

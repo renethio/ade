@@ -14,12 +14,13 @@ var roomType = ['condo', 'house', 'apartment', 'basement'];
  * Akeray Schema
  */
 var AkeraySchema = new Schema({
-  name: {
+  description: {
     type: String,
-    enum: roomType
+    trim: true
+    // enum: roomType
   },
-  bedroom: {
-    type: Number,
+  type: {
+    type: String,
     default: '',
     trim: true
   },
@@ -33,6 +34,10 @@ var AkeraySchema = new Schema({
     enum: statesArray
   },
   zip: Number,
+
+  phone: Number,
+
+  price: Number,
 
   created: {
     type: Date,
