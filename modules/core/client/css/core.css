@@ -71,13 +71,16 @@ a:hover .header-profile-image {
 
 body {
   /*background-color: rgba(10, 60, 11, 0.53);*/
-  background-image: url("/modules/core/client/img/loaders/interior3.jpeg");
+  background-image: url("/modules/core/client/img/loaders/buy.jpg");
   background-size: 100% 100%;
-  /*background-size: cover;*/
-  /*background-repeat: no-repeat;*/
-  /*height: 50%;*/
+  max-height: 100%;
+  max-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 
 }
+
+
 
 
 
