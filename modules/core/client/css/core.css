@@ -15,11 +15,11 @@ body {
   text-align: center;
 }
 
-.logo {
-  /*display: inline-block;*/
-  margin-bottom: -50px;
+/*.logo {
+  display: inline-block;
+  margin-bottom: -15%;
 
-}
+}*/
 
 .carousel-inner img {
   width: 80%; 
@@ -31,7 +31,6 @@ body {
 
   width: 20px;
   height: 20px;
-
 }
 
 .undecorated-link:hover {
@@ -71,12 +70,11 @@ a:hover .header-profile-image {
 
 body {
   /*background-color: rgba(10, 60, 11, 0.53);*/
-  background-image: url("/modules/core/client/img/loaders/buy.jpg");
+  background-image: url("/modules/core/client/img/loaders/background.jpg");
   background-size: 100% 100%;
-  max-height: 100%;
-  max-height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+  background-blend-mode: multiply;
 
 }
 

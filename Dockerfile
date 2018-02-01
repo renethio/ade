@@ -28,10 +28,8 @@ RUN apt-get update -q  \
  libkrb5-dev \
  sudo \
  apt-utils \
- ruby-compass\
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
 
 # Install nodejs
 RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
