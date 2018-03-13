@@ -1,5 +1,5 @@
 <section>
-  <div class="page-header">
+<!--   <div class="page-header">
     <h1 ng-bind="vm.liyu.name"></h1>
   </div>
   <div class="pull-right"
@@ -11,7 +11,37 @@
     <a class="btn btn-primary" ng-click="vm.remove()">
       <i class="glyphicon glyphicon-trash"></i>
     </a>
+  </div> -->
+
+
+
+  <div class="card col-lg-8 col-md-8 col-sm-8 col-xs-12 mx-auto">
+    <h2 class="card-header bg-warning">{{vm.liyu.skill}}</h2>
+  <div class="page-header">
+  <h5 ng-bind="vm.liyu.describe"> </h5>
+      
+      <h6 class="text-justify">State: {{vm.liyu.state}}</h6>
+      <h6 class="text-justify">City: {{vm.liyu.city}}</h6>
+      <!-- <h6 class="text-justify">Type: {{vm.akeray.type}}</h6> -->
+      <h6 class="text-justify">Zip: {{vm.liyu.zip}}</h6>
+      <h6 class="text-justify">Phone: {{vm.liyu.phone}}</h6>
+      <h6 class="text-justify"> <a href="/liyus">Back to list</a></h6>
   </div>
+  <div class="pull-right"
+       ng-show="vm.liyu.isCurrentUserOwner">
+    <a class="btn btn-primary"
+       ui-sref="liyus.edit({ liyuId: vm.liyu._id })">
+      <!-- <i class="glyphicon glyphicon-edit"></i> -->
+    <h8>Edit</h8>
+    </a>
+    <a class="btn btn-primary" ng-click="vm.remove()">
+      <!-- <i class="glyphicon glyphicon-trash"></i> -->
+      <h8 class="text-white">Delete</h8>
+    </a>
+  </div>
+
+
+
   <small>
     <em class="text-muted">
       Posted on
@@ -23,4 +53,8 @@
     </em>
   </small>
   <p class="lead" ng-bind="vm.liyu.content"></p>
+</div>
 </section>
+
+
+

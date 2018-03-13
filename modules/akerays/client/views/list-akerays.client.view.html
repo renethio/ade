@@ -7,9 +7,9 @@
 
 
   <div class="card col-lg-8 col-md-8 col-sm-8 col-xs-12 mx-auto">
-      <h2 class="card-header bg-warning">List of Homes / ዬሚኬራዩ ቤቶ          <button class="btn btn-danger col-lg-offset-2">
+      <h2 class="card-header bg-warning">List of rentals / የሚከራዩ ቤቶች           <button class="btn btn-danger col-lg-offset-2">
            <i class="glyphicon glyphicon-home"></i><a ui-sref="akerays.create" class="text-white">
-    ኣዲስ ቤት ኣኬራይ</a>
+    አዲስ ቤት አከራይ</a>
         </button></h2> 
       <br>
 
@@ -18,7 +18,7 @@
       <div class="input-group col-lg-8 col-lg-offset-2 mx-auto">
         <input type="text" class="form-control" ng-model="searchText" placeholder="Enter an address, State or Zip ...">
         <span class="input-group-btn">
-          <button class="btn btn-success" type="button">Search/ቤት ፌል</button>
+          <button class="btn btn-success" type="button">Search/ፈልግ</button>
           
         </span>
 
@@ -46,6 +46,7 @@
 
     
   <div class="list-group-item" ng-repeat="akeray in vm.akerays | filter:searchText">
+
     <a
        ui-sref="akerays.view({ akerayId: akeray._id })">
   
@@ -53,9 +54,6 @@
     </a>
      <p class="text-justify" >{{akeray.city}}, {{akeray.state}}, {{akeray.type}} &nbsp; &nbsp; Phone: {{akeray.phone}} </p>
 
-      
-
-    
 
 
 
@@ -84,7 +82,7 @@
  
 
   <div class="alert alert-warning text-center" ng-if="vm.akerays.$resolved && !vm.akerays.length">
-    No Akerays yet, why don't you <a ui-sref="akerays.create">create one</a>?
+    You have no home listed <a ui-sref="akerays.create">Add Home</a>?
   </div>
 <!-- </div> -->
 <!-- </div> -->

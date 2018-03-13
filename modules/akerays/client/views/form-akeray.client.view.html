@@ -27,17 +27,22 @@
         </div>
       
       <br>  
-      
+
+              <label class="control-label" for="type">Type of house</label>
+          <input name="type" type="text" ng-model="vm.akeray.type" id="type" class="form-control" placeholder="Type of house">
+
+
+        <br>
+              
         <label class="control-label" for="description"> Give a full brief description</label>
           <input name="description" type="text" ng-model="vm.akeray.description" id="description" class="form-control" placeholder="Name" required>
           <div ng-messages="vm.form.akerayForm.description.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Please describe your house.</p>
           </div>
         
-        <br>
         
-        <label class="control-label" for="type">Type of house</label>
-          <input name="type" type="text" ng-model="vm.akeray.type" id="type" class="form-control" placeholder="Type of house">
+        
+
           <!-- <div ng-messages="vm.form.akerayForm.type.$error" role="alert"> -->
             <!-- <p class="help-block error-text" ng-message="required">House type is required.</p> -->
           <!-- </div> -->

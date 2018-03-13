@@ -13,6 +13,30 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 
     // Home state routing
     $stateProvider
+      .state('mogzit', {
+        url: '/mogzit',
+        templateUrl: 'modules/core/client/views/mogzit.client.view.html',
+        controller: 'MogzitController',
+        controllerAs: 'vm'
+      })
+      .state('driver', {
+        url: '/driver',
+        templateUrl: 'modules/core/client/views/driver.client.view.html',
+        controller: 'DriverController',
+        controllerAs: 'vm'
+      })
+      // .state('core', {
+      //   url: '/core',
+      //   templateUrl: 'modules/core/client/views/core.client.view.html',
+      //   controller: 'CoreController',
+      //   controllerAs: 'vm'
+      // })
+      // .state('core', {
+      //   url: '/core',
+      //   templateUrl: 'modules/core/client/views/core.client.view.html',
+      //   controller: 'CoreController',
+      //   controllerAs: 'vm'
+      // })
       .state('contact', {
         url: '/contact',
         templateUrl: 'modules/core/client/views/contact.client.view.html',

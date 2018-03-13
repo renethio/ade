@@ -40,7 +40,7 @@
 
 @media (min-width:576px) {
   body {
-    background-color: red;
+    background-color: green;
    
   }
   .carousel-item.active img {
@@ -54,9 +54,9 @@
 }
 
 @media (min-width:768px) {
-  body {
+/*  body {
     background-color: yellow;
-  }
+  }*/
    .carousel-item.active img {
     background-color: red;
     background-blend-mode: multiply;
@@ -66,9 +66,9 @@
 }
 
 @media (min-width:992px) {
-  body {
+/*  body {
     background-color: green;
-  }
+  }*/
    .carousel-item.active img {
     background-color: red;
     background-blend-mode: multiply;
@@ -78,9 +78,9 @@
 }
 
 @media (min-width:1200px) {
-  body {
+/*  body {
     background-color: green;
-  }
+  }*/
    .carousel-item.active img {
     background-color: red;
     background-blend-mode: multiply;
@@ -133,9 +133,22 @@
       <div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12 mx-auto" >
         <div class="btn-group btn-group-xs mx-auto">
 
-            <a href="/akerays"><button class="btn btn-success btn-lg border border-warning text-light" type="button">ቴኬራ</button></a>
-            <a href="/akerays/create"><button class="btn btn-lg btn-success border border-warning text-white" href="/akerays/create" type="button">ኣኬራይ </button></a>
-            <a href="/liyus"><button class="btn btn-lg btn-success border border-warning" type="button" >ልዩልዩ </button></a>
+            <a href="/akerays"><button class="btn btn-success btn-lg border border-warning text-light" type="button">ተከራይ</button></a>
+            <a href="/akerays/create"><button class="btn btn-lg btn-success border border-warning text-white" href="/akerays/create" type="button">አከራይ </button></a>
+            <a href="#"><button class="btn btn-lg btn-success border border-warning" type="button" >
+                <li class="dropdown">
+    <a class="dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ልዩልዩ</a>
+    <div class="dropdown-menu bg-warning">
+      <a class="dropdown-item" href="/mogzit">ሞግዚት</a>
+      <a class="dropdown-item" href="driver">ሜኪና አለማማጅ</a>
+      <!-- <a class="dropdown-item" href="#">ትበካ/</a> -->
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="/liyus">ሌሎች</a>
+    </div>
+  </li>
+
+
+            </button></a>
        </div>
         </div>
 
@@ -205,7 +218,7 @@
 
   <div class="col col-lg-6 mx-auto">
         <h2 class="text-center text-white">
-        ቤቶን ማኬራዬት ዪፌልጋሉ ኢንግዲኣውስ ኣድራሳው ይንጌሩን 
+        ቤቶትን ማከራየት ይፈልጋሉ እንግዲያዉስ አድራሻዎትን ይንገሩን።  
         </h2>
 
               <h2 class="text-white text-center">       <button class="btn btn-danger">
@@ -283,9 +296,10 @@
     
     <div class="carousel-caption"> 
     <div>
-    <h4 class="text-center text-warning">ቴኬራ</h4>
-    <p >
-      ሌኢርሶ ቴስማሚ ዬሆኔዉን ቤት ይፌልጋሉ? ኢንግዲያዉስ ምርቻቆትን ቤኬላሉ ማግንት ይችላሉ፨
+    
+    <p>ቤት
+      <span class="text-center text-warning"> ተከራይ</span>
+      ነዎት? ለእርሶ ቴስማሚ የሆነዉን ቤት አድራሻዎትን በማስገባት ይፈልጉ
     </p>
 
     </div>
@@ -294,10 +308,10 @@
   </div>
   </div>
     <div class="carousel-item" style="background-blend-mode: multiply;">
-      <img class="d-block w-99 border border-warning bg-danger"  src="/modules/core/client/img/loaders/akeray.jpg" alt="house">
+      <img class="d-block w-99 border border-warning bg-warning"  src="/modules/core/client/img/loaders/akeray.jpg" alt="house">
        <div class="carousel-caption">
-    <h5 class="text-center text-danger">ኣኬራይ</h5>
-  <p>ቤቶትን ማኬራዬት ያስባሉ ? ኢንግዲያዉስ ቤኬላሉ ቤሜሜዝጌብ ቤቶትን ማኬራዬት ይችላሉ፨</p>
+    
+  <p> ቤት <span class="text-center text-warning">አከራይ</span> ነዎት? ቤቶትን በከላሉ በማስገባት ማከራየት ይችላሉ።</p>
 
   </div>
   </div>
@@ -307,9 +321,9 @@
        <div class="carousel-caption">
   
   
-    <h5 class="text-center text-danger">ልዩልዩ</h5>
+    
 
-    <p>ማንናዉም ኣጌልግሎቶችን ሌማግኔት ውይንም ሌሜስቴት ይሄናዉን ሜስፌንትር ይቻኑ፨</p>
+    <p> ማንኛዉንም አገልግሎቶችን ለመስተት ወይንም ለማግኘት <span class="text-center text-warning">ልዩልዩ</span> የሚለዉን ማስፈንተርያ በመጫን ይመልከቱ።</p>
   
 
   </div>

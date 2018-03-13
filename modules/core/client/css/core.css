@@ -10,11 +10,20 @@
    text-align: center;
 }
 
+
+
 body {
   
   text-align: center;
 }
 
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+}
 /*.logo {
   display: inline-block;
   margin-bottom: -15%;
@@ -55,8 +64,10 @@ a:hover .header-profile-image {
   opacity: 0.5;
 }
 .user-header-dropdown-toggle {
-  padding-top: 11px !important;
-  padding-bottom: 11px !important;
+  padding-top: 11% !important;
+  padding-bottom: 11% !important;
+
+
 }
 .error-text {
   display: none;

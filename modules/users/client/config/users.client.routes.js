@@ -5,6 +5,12 @@ angular.module('users').config(['$stateProvider',
   function ($stateProvider) {
     // Users state routing
     $stateProvider
+      .state('users', {
+        url: '/users',
+        templateUrl: 'modules/users/client/views/users.client.view.html',
+        controller: 'SettingscontrollerController',
+        controllerAs: 'vm'
+      })
       .state('settings', {
         abstract: true,
         url: '/settings',

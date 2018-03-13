@@ -1,6 +1,7 @@
 @media (min-width: 992px) {
   .nav-users {
     position: fixed;
+    right: 0;
   }
 }
 .social-account-container {

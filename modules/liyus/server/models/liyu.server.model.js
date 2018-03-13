@@ -19,9 +19,9 @@ var LiyuSchema = new Schema({
     trim: true
   },
 
-  experience: {
-    type: Number,
-    required: "Please fill your experiance"
+  describe: {
+    type: String,
+    required: "Please describe your skill"
   },
 
   street: String,

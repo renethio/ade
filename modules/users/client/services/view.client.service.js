@@ -8,7 +8,7 @@
   usersService.$inject = [/*Example: '$state', '$window' */];
 
   function usersService(/*Example: $state, $window */) {
-    // Users service logic
+    // View service logic
     // ...
 
     // Public API
