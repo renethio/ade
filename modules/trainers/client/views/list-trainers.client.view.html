@@ -1,0 +1,132 @@
+
+<section class="trainer">
+
+ <div>
+   <h1 style="height: 50px;"></h1>
+ </div>
+
+  <div>
+    <h2 class="text-white"> መኪና ያሰለጥናሉ? እዚህ ይመዝገቡ 
+    <button type="button" class="btn btn-danger text-center">
+    <i class="glyphicon glyphicon-lock"></i><a ui-sref="trainers.create" class="text-white">
+    አዲስ መኪና አሰልጣኝ
+  </a></button>
+</h2>
+  </div>
+   <div class="card col-lg-8 col-md-8 col-sm-8 col-xs-12 mx-auto border-danger">
+
+
+  <div class="card-header bg-warning">
+    <h1>መኪና አሰልታኝ </h1>
+  </div>
+
+  <br>
+
+
+    <!-- <div class="row search"> -->
+    <!-- <div class="col-lg-6"> -->
+      <div class="input-group col-lg-8 col-lg-offset-2">
+        <input type="text" class="form-control" ng-model="searchText" placeholder="Enter an address, Zip code or Services...">
+        <span class="input-group-btn">
+          <button class="btn btn-success" type="button">Go/ፌልግ</button>
+        </span>
+      </div><!-- /input-group -->
+    <!-- </div>/.col-lg-6 -->
+
+      <!-- <div class="col-xs-12 col-sm-2 text-center"> -->
+
+    <br>
+
+  <!-- </div> -->
+  <!-- </div>/.row -->
+
+
+
+  <!-- <div class="list-group"> -->
+  <div class="col-lg-12" ng-repeat="trainer in vm.trainers | filter:searchText">
+    <a 
+       ui-sref="trainers.view({ trainerId: trainer._id })"
+       class="list-group-item">
+<!--       <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="trainer.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="trainer.user" ng-bind="trainer.user.displayName"></span>
+        <span ng-if="!trainer.user">Deleted User</span>
+      </small> -->
+      <h4 class="list-group-item-heading" ng-bind="trainer.name"></h4>
+      <h8>{{trainer.address}}</h8>
+      <h8>{{trainer.describe}}</h8>
+<!--       <h8>{{trainer.city}}</h8>
+      <h8>{{trainer.zip}}</h8>
+      <h8>{{trainer.phone}}</h8> -->
+      <h8>{{trainer.phone}}</h8>
+    </a>
+</div>
+<!--         <div class="muyategna" class="col-sm-6" class="btn btn-primary">
+        <h4>If you are new to our site and get connected with customers please provide your muya with experience and interested customer will contact your(to fix the centering watch day 18 8minute</h4>
+      <h1>
+       <button type="button" class="btn btn-success"><a ui-sref="trainers.create"> ኣጌልጊሎት ስቺ </a></button> 
+      </h1>
+
+
+    </div> -->
+
+    <!-- </div> -->
+
+
+  </div>
+  <div class="alert alert-warning text-center" ng-if="vm.trainers.$resolved && !vm.trainers.length">
+    No trainers yet, why don't you <a ui-sref="trainers.create">create one</a>?
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<section>
+  <div class="page-header">
+    <h1>Trainers</h1>
+  </div>
+  <div class="list-group">
+    <a ng-repeat="trainer in vm.trainers"
+       ui-sref="trainers.view({ trainerId: trainer._id })"
+       class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="trainer.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="trainer.user" ng-bind="trainer.user.displayName"></span>
+        <span ng-if="!trainer.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="trainer.name"></h4>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" ng-if="vm.trainers.$resolved && !vm.trainers.length">
+    No Trainers yet, why don't you <a ui-sref="trainers.create">create one</a>?
+  </div>
+</section> -->

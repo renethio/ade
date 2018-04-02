@@ -1,0 +1,127 @@
+<section>
+
+   <div>
+   <h1 style="height: 50px;"></h1>
+ </div>
+
+  <div class="card col-lg-8 col-md-8 col-sm-8 col-xs-12 mx-auto">
+    <h1 class="card-header bg-warning">{{vm.childcare._id ? 'Edit childcare' : 'አዲስ ሞግዚት/Babysitter'}}</h1>
+  
+
+
+
+
+<div class="col-md-6 col-lg-6 col-sm-6 col-xs-4 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 mx-auto">
+
+      <div class="list-group">
+    <a ng-repeat="childcare in vm.childcares"
+       ui-sref="childcares.view({ childcareId: childcare._id })"
+       class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="childcare.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="childcare.user" ng-bind="childcare.user.displayName"></span>
+        <span ng-if="!childcare.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="childcare.name"></h4>
+    </a>
+  </div>
+  
+
+
+  
+    <form name="vm.form.childcareForm" class="form-horizontal" ng-submit="vm.save(vm.form.childcareForm.$valid)" novalidate>
+      <fieldset>
+
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+
+    
+<!--       <div class="col-sm-6 text-center">
+        <i class="glyphicon glyphicon-home akeray-profile " 
+        ng-class = "{'text-primary': preferred, 'text-danger': !preferred}"></i>
+      </div> -->
+      <br>
+      <br>
+        
+        <label class="control-label" for="address"> የሚኖሩበት ከተማ ወይም ሀገር</label>
+          <input name="address" type="text" ng-model="vm.childcare.address" id="address" class="form-control" placeholder="City, State and/or Country" required>
+          <div ng-messages="vm.form.childcareForm.address.$error" role="alert">
+            <p class="help-block error-text" ng-message="required"> Please enter your address.</p>
+          </div>
+        
+      <br>
+      <br>
+      
+        <label class="control-label" for="describe">ስለ እራሶት ትንሽ ይግለፁ። </label>
+          <input name="describe" type="text" ng-model="vm.childcare.describe" id="describe" class="form-control" placeholder="Describe yourself" required>
+          <div ng-messages="vm.form.childcareForm.describe.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Please describe yourself.</p>
+          </div>
+
+      <br>
+      <br>
+    
+        <label class="control-label" for="type">ተመላላሽ ነዎት ወይስ በቤት ዉስጥ ነዉ የሚጠብቁት?</label>
+          <input name="type" type="text" ng-model="vm.childcare.type" id="type" class="form-control" placeholder="In home vs visiting babysitter" required>
+          <div ng-messages="vm.form.childcareForm.type.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Please fill out how you will take care of the baby.</p>
+          </div>
+  
+      <br>
+      <br>
+
+<!--         <label class="control-label" for="city">City</label>
+          <input name="city" type="text" ng-model="vm.childcare.city" id="city" class="form-control" placeholder="city" required>
+          <div ng-messages="vm.form.childcareForm.city.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">City is required.</p>
+          </div>
+
+
+        <label class="control-label" for="state">State</label>
+          <input name="state" type="text" ng-model="vm.childcare.state" id="state" class="form-control" placeholder="State" required>
+          <div ng-messages="vm.form.childcareForm.state.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">State required.</p>
+          </div>
+  
+
+        <label class="control-label" for="zip">Zip Code</label>
+          <input name="zip" type="text" ng-model="vm.childcare.zip" id="zip" class="form-control" placeholder="Zip code" required>
+          <div ng-messages="vm.form.childcareForm.zip.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Zip is required.</p>
+          </div> -->
+
+
+
+        <label class="control-label" for="zip">ስልክ ቁጥ</label>
+          <input name="phone" type="text" ng-model="vm.childcare.phone" id="phone" class="form-control" placeholder="Phone Number" required>
+          <div ng-messages="vm.form.childcareForm.phone.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Phone required.</p>
+          </div>
+
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-success btn-lg btn-block">{{vm.childcare._id ? 'Update' : 'List'}}</button>
+        </div>
+
+      </fieldset>
+    </form>
+  
+
+</div>
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+

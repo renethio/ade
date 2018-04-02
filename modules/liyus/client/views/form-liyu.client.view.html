@@ -44,41 +44,53 @@
         ng-class = "{'text-primary': preferred, 'text-danger': !preferred}"></i>
       </div> -->
 
-        
-        <label class="control-label" for="skill"> What type is your skill</label>
-          <input name="skill" type="text" ng-model="vm.liyu.skill" id="skill" class="form-control" placeholder="Skill" required>
+        <br>
+        <br>
+        <label class="control-label" for="skill"> ምን አይነት ሞያ ነዉ ያለዎት?</label>
+          <input name="skill" type="text" ng-model="vm.liyu.skill" id="skill" class="form-control" placeholder="Add your skill" required>
           <div ng-messages="vm.form.liyuForm.skill.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Skill type is required.</p>
           </div>
-        
+
+        <br>
+        <br>
       
-        <label class="control-label" for="describe">Describe your skill</label>
-          <input name="describe" type="text" ng-model="vm.liyu.describe" id="describe" class="form-control" placeholder="Skill description" required>
+        <label class="control-label" for="describe">ስለ እራሶት ትንሽ ይግለፁ</label>
+          <input name="describe" type="text" ng-model="vm.liyu.describe" id="describe" class="form-control" placeholder="Describe your skill" required>
           <div ng-messages="vm.form.liyuForm.describe.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Skill description required.</p>
           </div>
+
+        <br>
+        <br>
     
-        <label class="control-label" for="street">street</label>
+        <label class="control-label" for="street">መንገድ/street</label>
           <input name="city" type="text" ng-model="vm.liyu.street" id="street" class="form-control" placeholder="street address" required>
           <div ng-messages="vm.form.liyuForm.street.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Street name required.</p>
           </div>
-  
 
-        <label class="control-label" for="city">City</label>
+        <br>
+        <br>
+
+        <label class="control-label" for="city">ከተማ/City</label>
           <input name="city" type="text" ng-model="vm.liyu.city" id="city" class="form-control" placeholder="city" required>
           <div ng-messages="vm.form.liyuForm.city.$error" role="alert">
             <p class="help-block error-text" ng-message="required">City is required.</p>
           </div>
 
+        <br>
+        <br>
 
-        <label class="control-label" for="state">State</label>
-          <input name="state" type="text" ng-model="vm.liyu.state" id="state" class="form-control" placeholder="State" required>
+        <label class="control-label" for="state">ሀገር/Country/State</label>
+          <input name="state" type="text" ng-model="vm.liyu.state" id="state" class="form-control" placeholder="e.g Ethiopia, Virginia" required>
           <div ng-messages="vm.form.liyuForm.state.$error" role="alert">
             <p class="help-block error-text" ng-message="required">State required.</p>
           </div>
   
 
+        <br>
+        <br>
         <label class="control-label" for="zip">Zip Code</label>
           <input name="zip" type="text" ng-model="vm.liyu.zip" id="zip" class="form-control" placeholder="Zip code" required>
           <div ng-messages="vm.form.liyuForm.zip.$error" role="alert">
@@ -87,7 +99,9 @@
 
 
 
-        <label class="control-label" for="zip">Phone Number</label>
+        <br>
+        <br>
+        <label class="control-label" for="zip">ስልክ/Phone Number</label>
           <input name="phone" type="text" ng-model="vm.liyu.phone" id="phone" class="form-control" placeholder="Phone Number" required>
           <div ng-messages="vm.form.liyuForm.phone.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Zip is required.</p>

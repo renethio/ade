@@ -1,0 +1,103 @@
+
+<section>
+<!--   <div class="page-header">
+    <h1 ng-bind="vm.trainer.name"></h1>
+  </div>
+  <div class="pull-right"
+       ng-show="vm.trainer.isCurrentUserOwner">
+    <a class="btn btn-primary"
+       ui-sref="trainers.edit({ trainerId: vm.trainer._id })">
+      <i class="glyphicon glyphicon-edit"></i>
+    </a>
+    <a class="btn btn-primary" ng-click="vm.remove()">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div> -->
+
+
+
+  <div class="card col-lg-8 col-md-8 col-sm-8 col-xs-12 mx-auto">
+    <h2 class="card-header bg-warning">{{vm.trainer.skill}}</h2>
+  <div class="page-header">
+  <h5 ng-bind="vm.trainer.describe"> </h5>
+      
+      <h6 class="text-justify">State: {{vm.trainer.address}}</h6>
+      <h6 class="text-justify">City: {{vm.trainer.describe}}</h6>
+      <!-- <h6 class="text-justify">Type: {{vm.akeray.type}}</h6> -->
+      <!-- <h6 class="text-justify">Zip: {{vm.trainer.zip}}</h6> -->
+      <h6 class="text-justify">Phone: {{vm.trainer.phone}}</h6>
+      <h6 class="text-justify"> <a href="/trainers">Back to list</a></h6>
+  </div>
+  <div class="pull-right"
+       ng-show="vm.trainer.isCurrentUserOwner">
+    <a class="btn btn-primary"
+       ui-sref="trainers.edit({ trainerId: vm.trainer._id })">
+      <!-- <i class="glyphicon glyphicon-edit"></i> -->
+    <h8>Edit</h8>
+    </a>
+    <a class="btn btn-primary" ng-click="vm.remove()">
+      <!-- <i class="glyphicon glyphicon-trash"></i> -->
+      <h8 class="text-white">Delete</h8>
+    </a>
+  </div>
+
+
+
+  <small>
+    <em class="text-muted">
+      Posted on
+      <span ng-bind="vm.trainer.created | date:'mediumDate'"></span>
+      by
+      <span ng-if="vm.trainer.user"
+            ng-bind="vm.trainer.user.displayName"></span>
+      <span ng-if="!vm.trainer.user">Deleted User</span>
+    </em>
+  </small>
+  <p class="lead" ng-bind="vm.trainer.content"></p>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<section>
+  <div class="page-header">
+    <h1 ng-bind="vm.trainer.name"></h1>
+  </div>
+  <div class="pull-right"
+       ng-show="vm.trainer.isCurrentUserOwner">
+    <a class="btn btn-primary"
+       ui-sref="trainers.edit({ trainerId: vm.trainer._id })">
+      <i class="glyphicon glyphicon-edit"></i>
+    </a>
+    <a class="btn btn-primary" ng-click="vm.remove()">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <small>
+    <em class="text-muted">
+      Posted on
+      <span ng-bind="vm.trainer.created | date:'mediumDate'"></span>
+      by
+      <span ng-if="vm.trainer.user"
+            ng-bind="vm.trainer.user.displayName"></span>
+      <span ng-if="!vm.trainer.user">Deleted User</span>
+    </em>
+  </small>
+  <p class="lead" ng-bind="vm.trainer.content"></p>
+</section>
+ -->
