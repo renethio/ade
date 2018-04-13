@@ -79,7 +79,25 @@ a:hover .header-profile-image {
   display: inline;
 }
 
+.fa {
+  padding: 2px;
+  font-size: 20px;
 
+  /*width: 50px;*/
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  border-radius: 1px;
+}
 
 
 
@@ -88,7 +106,7 @@ a:hover .header-profile-image {
 
 body {
   /*background-color: rgba(10, 60, 11, 0.53);*/
-  background-image: url("/modules/core/client/img/loaders/background.jpg");
+  background-image: url("/modules/core/client/img/loaders/background2.jpg");
   background-size: 100% 100%;
   background-size: cover;
   background-repeat: no-repeat;

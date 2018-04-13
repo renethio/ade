@@ -39,15 +39,15 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
       // })
       .state('contact', {
         url: '/contact',
-        templateUrl: 'modules/core/client/views/contact.client.view.html',
-        controller: 'ContactController',
-        controllerAs: 'vm'
+        templateUrl: 'modules/core/client/views/contact.client.view.html'
+        // controller: 'ContactController',
+        // controllerAs: 'vm'
       })
       .state('about', {
         url: '/about',
-        templateUrl: 'modules/core/client/views/about.client.view.html',
-        controller: 'AboutController',
-        controllerAs: 'vm'
+        templateUrl: 'modules/core/client/views/about.client.view.html'
+        // controller: 'AboutController',
+        // controllerAs: 'vm'
       })
       .state('advertise', {
         url: '/advertise',
