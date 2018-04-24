@@ -22,25 +22,29 @@
 
         <div class="form-group" show-errors>
 
-        <div ng-show="vm.error" class="text-danger ">
+        <div ng-show="vm.error" class="text-danger">
           <strong ng-bind="vm.error"></strong>
         </div>
       
           <br>
           <br>
 
-              <label class="control-label" for="type">የቤቱ አይነት</label>
-          <input name="type" type="text" ng-model="vm.akeray.type" id="type" class="form-control" placeholder="e.g Condo or Basement">
+          <label class="control-label" for="type">የቤቱ አይነት</label>
+
+          <input name="type" type="text" ng-model="vm.akeray.type" id="type" class="form-control" placeholder="e.g Condo or Basement (required)">
+          <div ng-messages="vm.form.akerayForm.type.$error" role="alert">
+            <p class="help-block error-text required" ng-message="required">Type name required.</p>
+          </div>
 
 
         <br>
         <br>
 
         <label class="control-label" for="description"> ስለ ቤቱ ትንሽ ይግለፁ</label>
-          <input name="description" type="text" ng-model="vm.akeray.description" id="description" class="form-control" placeholder="e.g A besement with its own bathromm and kitchen ..." required>
-          <div ng-messages="vm.form.akerayForm.description.$error" role="alert">
+          <input name="description" type="text" ng-model="vm.akeray.description" id="description" class="form-control" placeholder="e.g A besement with its own bathromm and kitchen ...">
+ <!--          <div ng-messages="vm.form.akerayForm.description.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Please describe your house.</p>
-          </div>
+          </div> -->
         
         
         
@@ -51,7 +55,7 @@
           <br>
           <br>
 
-        <label class="control-label" for="street">መንገ/street</label>
+        <label class="control-label required" for="street">መንገድ/street</label>
           <input name="city" type="text" ng-model="vm.akeray.street" id="street" class="form-control" placeholder="Optional street address">
 <!--           <div ng-messages="vm.form.akerayForm.street.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Street name required.</p>
@@ -62,7 +66,7 @@
 
 
         <label class="control-label" for="city">ከተማ/City</label>
-          <input name="city" type="text" ng-model="vm.akeray.city" id="city" class="form-control" placeholder="city" required>
+          <input name="city" type="text" ng-model="vm.akeray.city" id="city" class="form-control" placeholder="city (required)" required>
           <div ng-messages="vm.form.akerayForm.city.$error" role="alert">
             <p class="help-block error-text" ng-message="required">City is required.</p>
           </div>
@@ -71,7 +75,7 @@
           <br>
         
         <label class="control-label" for="state">ሀገር/Country/State</label>
-          <input name="state" type="text" ng-model="vm.akeray.state" id="state" class="form-control" placeholder="State or Country" required>
+          <input name="state" type="text" ng-model="vm.akeray.state" id="state" class="form-control" placeholder="State or Country (required)" required>
           <div ng-messages="vm.form.akerayForm.state.$error" role="alert">
             <p class="help-block error-text" ng-message="required">State or Country required.</p>
           </div>
@@ -90,7 +94,7 @@
           <!-- </div> -->
         
        <label class="control-label" for="phone">ስልክ/Phone</label>
-          <input name="phone" type="text" ng-model="vm.akeray.phone" id="phone" class="form-control" placeholder="Phone No." required>
+          <input name="phone" type="text" ng-model="vm.akeray.phone" id="phone" class="form-control" placeholder="Phone No. (required)" required>
           <div ng-messages="vm.form.akerayForm.phone.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Phone number is required.</p>
           </div>

@@ -44,7 +44,7 @@
         ng-class = "{'text-primary': preferred, 'text-danger': !preferred}"></i>
       </div> -->
 
-        
+       <br>
        
 
         <label class="control-label" for="name">ስም</label>
@@ -53,6 +53,7 @@
             <p class="help-block error-text" ng-message="required">Name required.</p>
           </div>
 
+       <br>
 
         <label class="control-label" for="address"> የሚኖሩበት ከተማ ወይም ሀገር</label>
           <input name="address" type="text" ng-model="vm.trainer.address" id="address" class="form-control" placeholder="address" required>
@@ -60,7 +61,8 @@
             <p class="help-block error-text" ng-message="required">Please enter your address.</p>
           </div>
         
-      
+       <br>
+
         <label class="control-label" for="describe">ስለ እራሶት ትንሽ ይግለፁ።</label>
           <input name="describe" type="text" ng-model="vm.trainer.describe" id="describe" class="form-control" placeholder="Skill description" required>
           <div ng-messages="vm.form.trainerForm.describe.$error" role="alert">
@@ -94,7 +96,7 @@
             <p class="help-block error-text" ng-message="required">Zip is required.</p>
           </div> -->
 
-
+       <br>
 
         <label class="control-label" for="zip">ስልክ</label>
           <input name="phone" type="text" ng-model="vm.trainer.phone" id="phone" class="form-control" placeholder="Phone Number" required>
@@ -103,6 +105,7 @@
           </div>
 
 
+       <br> 
         <div class="form-group">
           <button type="submit" class="btn btn-success btn-lg btn-block">{{vm.trainer._id ? 'Update' : 'List'}}</button>
         </div>

@@ -7,35 +7,45 @@ var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
 
-var statesArray = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"];
-var roomType = ['condo', 'house', 'apartment', 'basement'];
+// var statesArray = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"];
+// var roomType = ['condo', 'house', 'apartment', 'basement'];
 
 /**
  * Akeray Schema
  */
 var AkeraySchema = new Schema({
-  description: {
-    type: String,
-    trim: true
+  description: String,
+    // required:true,
+    // trim: true
     // enum: roomType
-  },
+  
   type: {
     type: String,
     default: '',
+    required:[true, 'Home type is required'],
     trim: true
   },
 
   street: String,
-  city: String,
+
+  city: {
+    type: String,
+    required:[true, 'City is required'],
+    trim: true},
   state: {
     type: String,
-    uppercase: true,
-    required: true,
-    enum: statesArray
-  },
+    required: true},
+
+    // uppercase: true,
+    // required: true,
+    // enum: statesArray
+  
   zip: Number,
 
-  phone: Number,
+  
+  phone: {
+    type: Number,
+    required:true},
 
   price: Number,
 
