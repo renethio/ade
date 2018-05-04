@@ -32,5 +32,12 @@ forked process: 1844
 child process started successfully, parent exiting
 
 To run the app use the following command(make sure you are in ‘ade’ directory 
-sudo pm2 start server.js
+sudo pm2 start server.js(for development environment)
+
+To run the code in production 
+1. export NODE_ENV=production
+2. grunt build
+3. pm2 start server.js
+
+
 
