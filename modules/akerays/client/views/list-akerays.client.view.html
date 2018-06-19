@@ -51,10 +51,13 @@
     <a
        ui-sref="akerays.view({ akerayId: akeray._id })">
   
+<div >
       <h6 class="text-center" class="list-group-item-heading" ng-bind="akeray.type"></h6>
-    </a>
-     <p class="text-center" >{{akeray.city}}, {{akeray.state}}, {{akeray.type}} &nbsp; &nbsp; Phone: {{akeray.phone}} </p>
-
+    
+    <h8> {{akeray.city}} {{akeray.state}}</h8>
+<br>
+ <h8> Phone: {{akeray.phone}} </h8> </div>
+</a>
 
 
 
