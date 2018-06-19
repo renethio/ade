@@ -66,17 +66,7 @@ module.exports = {
     callbackURL: '/api/auth/paypal/callback',
     sandbox: false
   },
-  // mailer: {
-  //   from: process.env.MAILER_FROM || 'MAILER_FROM',
-  //   options: {
-  //     service: process.env.MAILER_SERVICE_PROVIDER || 'MAILER_SERVICE_PROVIDER',
-  //     auth: {
-  //       user: process.env.MAILER_EMAIL_ID || 'MAILER_EMAIL_ID',
-  //       pass: process.env.MAILER_PASSWORD || 'MAILER_PASSWORD'
-  //     }
-  //   }
-  // },
-    mailer: {
+  mailer: {
     from: process.env.MAILER_FROM || 'yageren',
     options: {
       service: process.env.MAILER_SERVICE_PROVIDER || 'gmail',
@@ -84,9 +74,19 @@ module.exports = {
         user: process.env.MAILER_EMAIL_ID || 'yageren17@gmail.com',
         pass: process.env.MAILER_PASSWORD || 'Agebresenbet@17'
       }
-      //test
     }
   },
+  // mailer: {
+  // from: process.env.MAILER_FROM || 'yageren',
+  // options: {
+  //   service: process.env.MAILER_SERVICE_PROVIDER || 'gmail',
+  //   auth: {
+  //     user: process.env.MAILER_EMAIL_ID || 'yageren17@gmail.com',
+  //     pass: process.env.MAILER_PASSWORD || 'Agebresenbet@17'
+  //   }
+  //   //test
+  // }
+  // },
   seedDB: {
     seed: process.env.MONGO_SEED === 'true' ? true : false,
     options: {
