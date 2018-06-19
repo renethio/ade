@@ -15,7 +15,7 @@
        ng-show="vm.akeray.isCurrentUserOwner">
     <a class="btn btn-primary"
        ui-sref="akerays.edit({ akerayId: vm.akeray._id })">
-       {{vm.akeray.user.displayName}}
+
       <!-- <i class="glyphicon glyphicon-edit"></i> -->
     <h8>Edit</h8>
     </a>
@@ -35,6 +35,6 @@
       <span ng-if="!vm.akeray.user">Deleted User</span>
     </em>
   </small>
-  <p class="lead" ng-bind="vm.akeray.content"></p>
+  <p class="lead" ng-bind="vm.akeray.content">sample</p>
 </div>
 </section>

@@ -31,10 +31,10 @@ var AkeraySchema = new Schema({
   city: {
     type: String,
     required:[true, 'City is required'],
-    trim: true},
+    trim: true },
   state: {
     type: String,
-    required: true},
+    required: true },
 
     // uppercase: true,
     // required: true,
@@ -45,7 +45,7 @@ var AkeraySchema = new Schema({
   
   phone: {
     type: Number,
-    required:true},
+    required:true },
 
   price: Number,
 
