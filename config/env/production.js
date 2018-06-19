@@ -84,6 +84,7 @@ module.exports = {
         user: process.env.MAILER_EMAIL_ID || 'yageren17@gmail.com',
         pass: process.env.MAILER_PASSWORD || 'Agebresenbet@17'
       }
+      //test
     }
   },
   seedDB: {
