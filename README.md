@@ -26,7 +26,7 @@ where /dev/xvdf is the name of the volume and /data/db is the mount point
 
 To run mongod at the backgroung use the –fork method
 
-[centos@ip-172-31-94-181 data]$ sudo mongod --fork --logpath /data/log/mongodb.log
+[centos@ip-172-31-94-181 data]$ sudo mongod --fork --bind_ip localhost --logpath /data/log/mongodb.log
 about to fork child process, waiting until server is ready for connections.
 forked process: 1844
 child process started successfully, parent exiting
