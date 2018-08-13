@@ -46,22 +46,23 @@
   <!-- /.row -->
 
     
-  <div class="list-group-item" ng-repeat="akeray in vm.akerays | filter:searchText">
+<div class="list-group-item" ng-repeat="akeray in vm.akerays | filter:searchText">
 
     <a
        ui-sref="akerays.view({ akerayId: akeray._id })">
   
-<div >
-      <h6 class="text-center" class="list-group-item-heading" ng-bind="akeray.type"></h6>
-    
-    <h8> {{akeray.city}} {{akeray.state}}</h8>
+<div class="text-left" >
+      <h6 class="list-group-item-heading" ng-bind="akeray.type"></h6>
+
+<h8> {{akeray.description}} {{akeray.state}}</h8>
+<h8> {{akeray.city}} {{akeray.state}}</h8>
 <br>
  <h8> Phone: {{akeray.phone}} </h8> </div>
 </a>
 
 
 
-  </div>
+</div>
 
 
 <!--   <div class="mymap" class=" col-sm-6 col-push-6"> Map that shows the location of the place goes here
