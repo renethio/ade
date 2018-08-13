@@ -79,7 +79,7 @@
         <label class="control-label" for="city">ከተማ/City</label>
           <input name="city" type="text" ng-model="vm.akeray.city" id="city" class="form-control" placeholder="city (required)" required>
           <div ng-messages="vm.form.akerayForm.city.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">City is required.</p>
+            <p class="help-block error-text text-danger" ng-message="required">City is required.</p>
           </div>
       </div>
 
@@ -98,7 +98,7 @@
         <label class="control-label" for="state">ሀገር/Country/State</label>
           <input name="state" type="text" ng-model="vm.akeray.state" id="state" class="form-control" placeholder="State or Country (required)" required>
           <div ng-messages="vm.form.akerayForm.state.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">State or Country required.</p>
+            <p class="help-block error-text text-danger" ng-message="required">State or Country required.</p>
           </div>
         </div>
         <br>
